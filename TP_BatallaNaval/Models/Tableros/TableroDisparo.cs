@@ -19,7 +19,7 @@ namespace TP_BatallaNaval.Models.Tableros
             {
                 for (int j = 0; j < paneles[i].Length; j++)
                 {
-                    if (jugador == "Jugador2")
+                    if (jugador == "Jugador2") //El jugador 2 no juega con Parity, sino puro Random
                     {
                         if (paneles[i][j].tipoPanel == TipoPanel.Vacio)
                         {

@@ -103,14 +103,7 @@ namespace TP_BatallaNaval.Models
             Coordenada coords;
             if (hitAdyacentes.Any())
             {
-                if(jugador == "Jugador2")
-                {
-                    coords = DisparoAleatorio(jugador);
-                }
-                else
-                {
-                    coords = DisparoBuscado();
-                }               
+                coords = DisparoBuscado();
             }
             else
             {
@@ -139,7 +132,7 @@ namespace TP_BatallaNaval.Models
         public void procesarResultado(Coordenada coordenada, ResultadoDisparo resultado)
         {
             var panel = TableroDisparo.paneles.ubicado(coordenada.fila, coordenada.columna);
-            switch(resultado)
+            switch (resultado)
             {
                 case Models.ResultadoDisparo.Hit:
                     panel.tipoPanel = TipoPanel.Hit;
@@ -165,6 +158,6 @@ namespace TP_BatallaNaval.Models
     }
 
 }
-    
+
 
 
