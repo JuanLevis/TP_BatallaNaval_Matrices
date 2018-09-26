@@ -46,6 +46,8 @@
             this.ganados_jugador2 = new System.Windows.Forms.Label();
             this.ganados_jugador1 = new System.Windows.Forms.Label();
             this.ganador_automatico = new System.Windows.Forms.Label();
+            this.lbl_j1_promedio = new System.Windows.Forms.Label();
+            this.lbl_j2_promedio = new System.Windows.Forms.Label();
             this.panel_automatico.SuspendLayout();
             this.panel_auto_ganador.SuspendLayout();
             this.SuspendLayout();
@@ -159,6 +161,8 @@
             // 
             this.panel_auto_ganador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel_auto_ganador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_auto_ganador.Controls.Add(this.lbl_j2_promedio);
+            this.panel_auto_ganador.Controls.Add(this.lbl_j1_promedio);
             this.panel_auto_ganador.Controls.Add(this.ganados_jugador2);
             this.panel_auto_ganador.Controls.Add(this.ganados_jugador1);
             this.panel_auto_ganador.Controls.Add(this.ganador_automatico);
@@ -196,6 +200,24 @@
             this.ganador_automatico.TabIndex = 0;
             this.ganador_automatico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_j1_promedio
+            // 
+            this.lbl_j1_promedio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_j1_promedio.Location = new System.Drawing.Point(-4, 119);
+            this.lbl_j1_promedio.Name = "lbl_j1_promedio";
+            this.lbl_j1_promedio.Size = new System.Drawing.Size(276, 23);
+            this.lbl_j1_promedio.TabIndex = 3;
+            this.lbl_j1_promedio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_j2_promedio
+            // 
+            this.lbl_j2_promedio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_j2_promedio.Location = new System.Drawing.Point(259, 119);
+            this.lbl_j2_promedio.Name = "lbl_j2_promedio";
+            this.lbl_j2_promedio.Size = new System.Drawing.Size(276, 23);
+            this.lbl_j2_promedio.TabIndex = 4;
+            this.lbl_j2_promedio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +254,8 @@
         private System.Windows.Forms.TextBox txt_nombre_jugador1;
         private System.Windows.Forms.Label lbl_nombre_jugador2;
         private System.Windows.Forms.Label lbl_nombre_jugador1;
+        private System.Windows.Forms.Label lbl_j2_promedio;
+        private System.Windows.Forms.Label lbl_j1_promedio;
     }
 }
 

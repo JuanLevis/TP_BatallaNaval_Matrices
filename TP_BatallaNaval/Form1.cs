@@ -35,12 +35,18 @@ namespace TP_BatallaNaval
             turnControls(panel_automatico, false);
             int victorias_j1 = 0, victorias_j2 = 0;
 
+            int promedioDisparosJ1 = 0 ,promedioDisparosJ2 = 0;
+
             int numJuegos = int.Parse(txt_automatico.Text);
 
             for (int i = 0; i < numJuegos; i++)
             {
                 Partida partida = new Partida(txt_nombre_jugador1.Text, txt_nombre_jugador2.Text);
                 partida.jugarHastaFinal();
+
+                promedioDisparosJ1 += (1 / (i + 1)) * ((((i + 1) - 1) * promedioDisparosJ1) + partida.Jugador1.cantidadDisparos); //Formula de media
+                promedioDisparosJ2 += (1 / (i + 1)) * ((((i + 1) - 1) * promedioDisparosJ2) + partida.Jugador2.cantidadDisparos); //Formula de media
+
                 if (partida.Jugador1.haPerdido)
                 {
                     victorias_j2++;
@@ -71,7 +77,9 @@ namespace TP_BatallaNaval
             
             ganados_jugador1.Text = "Victorias de Jugador 1 (" + txt_nombre_jugador1.Text + "): " + victorias_j1;
             ganados_jugador2.Text = "Victorias de Jugador 2 (" + txt_nombre_jugador2.Text + "): " + victorias_j2;
-            
+            lbl_j1_promedio.Text = "Media de disparos por partida de Jugador 1: " + promedioDisparosJ1;
+            lbl_j2_promedio.Text = "Media de disparos por partida de Jugador 2: " + promedioDisparosJ2;
+
         }
 
         /// <summary>

@@ -22,6 +22,7 @@ namespace TP_BatallaNaval.Models
                 return Barcos.All(x => x.estaHundido);
             }
         }
+        public int cantidadDisparos { get; set; }
         public Jugador(string name)
         {
             this.name = name;
@@ -36,6 +37,7 @@ namespace TP_BatallaNaval.Models
             };
             Tablero = new Tablero();
             TableroDisparo = new TableroDisparo();
+            cantidadDisparos = 0;
         }
         public void ubicarBarcos()
 
