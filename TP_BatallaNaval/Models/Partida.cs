@@ -26,14 +26,14 @@ namespace TP_BatallaNaval.Models
         /// </summary>
         public void jugarRonda()
         {
-            var coordenadas = Jugador1.Disparo();
+            var coordenadas = Jugador1.Disparo("Jugador1");
             Jugador1.cantidadDisparos++;
             var resultado = Jugador2.procesarDisparo(coordenadas);
             Jugador1.procesarResultado(coordenadas, resultado);
 
             if(!Jugador2.haPerdido)
             {
-                coordenadas = Jugador2.Disparo();
+                coordenadas = Jugador2.Disparo("Jugador2");
                 Jugador2.cantidadDisparos++;
                 resultado = Jugador1.procesarDisparo(coordenadas);
                 Jugador2.procesarResultado(coordenadas, resultado);

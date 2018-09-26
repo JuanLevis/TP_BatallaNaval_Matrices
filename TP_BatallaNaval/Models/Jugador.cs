@@ -96,26 +96,33 @@ namespace TP_BatallaNaval.Models
             }
         }
 
-        public Coordenada Disparo()
+        public Coordenada Disparo(string jugador)
         {
             //Si no hay hits en el tablero, no tenemos disparos, por lo tanto debemos disparar primero
             var hitAdyacentes = TableroDisparo.obtenerAdyacentesDisparados();
             Coordenada coords;
             if (hitAdyacentes.Any())
             {
-                coords = DisparoBuscado();
+                if(jugador == "Jugador2")
+                {
+                    coords = DisparoAleatorio(jugador);
+                }
+                else
+                {
+                    coords = DisparoBuscado();
+                }               
             }
             else
             {
-                coords = DisparoAleatorio();
+                coords = DisparoAleatorio(jugador);
             }
             return coords;
 
         }
 
-        public Coordenada DisparoAleatorio()
+        public Coordenada DisparoAleatorio(string jugador)
         {
-            var panelesDisponibles = TableroDisparo.casillasDisponibles();
+            var panelesDisponibles = TableroDisparo.casillasDisponibles(jugador);
             Random aleatorio = new Random(Guid.NewGuid().GetHashCode());
             var panelID = aleatorio.Next(panelesDisponibles.Count);
             return panelesDisponibles[panelID];

@@ -35,7 +35,7 @@ namespace TP_BatallaNaval
             turnControls(panel_automatico, false);
             int victorias_j1 = 0, victorias_j2 = 0;
 
-            int promedioDisparosJ1 = 0 ,promedioDisparosJ2 = 0;
+            int promedioDisparosJ1 = 0, promedioDisparosJ2 = 0;
 
             int numJuegos = int.Parse(txt_automatico.Text);
 
@@ -63,18 +63,18 @@ namespace TP_BatallaNaval
             }
             else
             {
-                if(victorias_j1 < victorias_j2)
+                if (victorias_j1 < victorias_j2)
                 {
-                    
+
                     ganador_automatico.Text = "El ganador es Jugador 2 (" + txt_nombre_jugador2.Text + ")";
                 }
                 else
-	            {
+                {
                     ganador_automatico.Text = " La partida resulto en empate";
                 }
-                
+
             }
-            
+
             ganados_jugador1.Text = "Victorias de Jugador 1 (" + txt_nombre_jugador1.Text + "): " + victorias_j1;
             ganados_jugador2.Text = "Victorias de Jugador 2 (" + txt_nombre_jugador2.Text + "): " + victorias_j2;
             lbl_j1_promedio.Text = "Media de disparos por partida de Jugador 1: " + promedioDisparosJ1;
@@ -89,7 +89,7 @@ namespace TP_BatallaNaval
         /// <param name="param"></param>
         private void turnControls(Panel panel, bool param)
         {
-            if(!param)
+            if (!param)
             {
                 foreach (Control control in panel.Controls)
                 {
@@ -103,8 +103,7 @@ namespace TP_BatallaNaval
                     control.Enabled = true;
                 }
             }
-            
-        }
 
+        }
     }
 }

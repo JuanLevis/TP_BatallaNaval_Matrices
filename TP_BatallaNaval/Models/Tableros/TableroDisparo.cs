@@ -12,18 +12,30 @@ namespace TP_BatallaNaval.Models.Tableros
         /// Devuelve una lista de coordenadas que tengo disponible para disparar con estrategia random
         /// </summary>
         /// <returns></returns>
-        public List<Coordenada> casillasDisponibles()
+        public List<Coordenada> casillasDisponibles(string jugador)
         {
             List<Coordenada> disponibles = new List<Coordenada>();
             for (int i = 0; i < paneles.Length; i++)
             {
                 for (int j = 0; j < paneles[i].Length; j++)
                 {
-                    if (paneles[i][j].tipoPanel == TipoPanel.Vacio && paneles[i][j].utilizaRandom)
+                    if (jugador == "Jugador2")
                     {
-                        disponibles.Add(new Coordenada(paneles[i][j].coordenadas.fila, paneles[i][j].coordenadas.columna));
+                        if (paneles[i][j].tipoPanel == TipoPanel.Vacio)
+                        {
+                            disponibles.Add(new Coordenada(paneles[i][j].coordenadas.fila, paneles[i][j].coordenadas.columna));
+                        }
+                    }
+
+                    else
+                    {
+                        if (paneles[i][j].tipoPanel == TipoPanel.Vacio && paneles[i][j].utilizaRandom)
+                        {
+                            disponibles.Add(new Coordenada(paneles[i][j].coordenadas.fila, paneles[i][j].coordenadas.columna));
+                        }
                     }
                 }
+
             }
 
             return disponibles;
