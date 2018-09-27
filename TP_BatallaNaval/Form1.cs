@@ -105,5 +105,36 @@ namespace TP_BatallaNaval
             }
 
         }
+
+        int flag = 0;
+        Partida partida = null;
+        private void btn_JugarManual_Click(object sender, EventArgs e)
+        {
+            if(flag == 0)
+            {
+                partida = new Partida(txt_nombreJugador1m.Text, txt_nombreJugador2m.Text);
+            }            
+            partida.jugarRonda();
+            Models.Tableros.Panel[][] tableroJugador1 = partida.Jugador1.TableroDisparo.paneles;
+            Models.Tableros.Panel[][] tableroJugador2 = partida.Jugador2.TableroDisparo.paneles;
+            grid_Jugador1.ColumnCount = 32;
+            grid_Jugador1.Rows.Clear();
+            gridJugador2.ColumnCount = 32;
+            gridJugador2.Rows.Clear();
+
+            for (int i = 0; i < 64; i++)
+            {
+                for (int j = 0; j < 32; j++)
+                {
+                    grid_Jugador1.Rows.Add();
+                    grid_Jugador1.Rows[i].Cells[j].Value = tableroJugador1[i][j].Estado;
+
+                    gridJugador2.Rows.Add();
+                    gridJugador2.Rows[i].Cells[j].Value = tableroJugador2[i][j].Estado;
+
+                }
+            }
+            flag = 1;
+        }
     }
 }
