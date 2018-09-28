@@ -88,7 +88,7 @@ namespace TP_BatallaNaval.Models
                     foreach (var panel in panelesAfectados)
                     {
                         panel.tipoPanel = barco.tipoPanel;
-                        //TableroDisparo.paneles[panel.coordenadas.fila][panel.coordenadas.columna] = panel;
+                        TableroDisparo.paneles[panel.coordenadas.fila][panel.coordenadas.columna] = panel;
                     }
                     estaAbierto = false;
 
