@@ -84,21 +84,19 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(-1, -2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1800, 1000);
+            this.tabControl1.Size = new System.Drawing.Size(1692, 705);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel_auto_ganador);
             this.tabPage1.Controls.Add(this.panel_automatico);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1546, 769);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1684, 679);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Automatico";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -112,49 +110,44 @@
             this.panel_auto_ganador.Controls.Add(this.ganados_jugador2);
             this.panel_auto_ganador.Controls.Add(this.ganados_jugador1);
             this.panel_auto_ganador.Controls.Add(this.ganador_automatico);
-            this.panel_auto_ganador.Location = new System.Drawing.Point(179, 47);
-            this.panel_auto_ganador.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_auto_ganador.Location = new System.Drawing.Point(134, 38);
             this.panel_auto_ganador.Name = "panel_auto_ganador";
-            this.panel_auto_ganador.Size = new System.Drawing.Size(702, 177);
+            this.panel_auto_ganador.Size = new System.Drawing.Size(527, 144);
             this.panel_auto_ganador.TabIndex = 3;
             // 
             // lbl_j2_promedio
             // 
             this.lbl_j2_promedio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_j2_promedio.Location = new System.Drawing.Point(345, 146);
-            this.lbl_j2_promedio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_j2_promedio.Location = new System.Drawing.Point(259, 119);
             this.lbl_j2_promedio.Name = "lbl_j2_promedio";
-            this.lbl_j2_promedio.Size = new System.Drawing.Size(368, 28);
+            this.lbl_j2_promedio.Size = new System.Drawing.Size(276, 23);
             this.lbl_j2_promedio.TabIndex = 4;
             this.lbl_j2_promedio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_j1_promedio
             // 
             this.lbl_j1_promedio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_j1_promedio.Location = new System.Drawing.Point(-5, 146);
-            this.lbl_j1_promedio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_j1_promedio.Location = new System.Drawing.Point(-4, 119);
             this.lbl_j1_promedio.Name = "lbl_j1_promedio";
-            this.lbl_j1_promedio.Size = new System.Drawing.Size(368, 28);
+            this.lbl_j1_promedio.Size = new System.Drawing.Size(276, 23);
             this.lbl_j1_promedio.TabIndex = 3;
             this.lbl_j1_promedio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ganados_jugador2
             // 
             this.ganados_jugador2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ganados_jugador2.Location = new System.Drawing.Point(376, 100);
-            this.ganados_jugador2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ganados_jugador2.Location = new System.Drawing.Point(282, 81);
             this.ganados_jugador2.Name = "ganados_jugador2";
-            this.ganados_jugador2.Size = new System.Drawing.Size(320, 28);
+            this.ganados_jugador2.Size = new System.Drawing.Size(240, 23);
             this.ganados_jugador2.TabIndex = 2;
             this.ganados_jugador2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ganados_jugador1
             // 
             this.ganados_jugador1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ganados_jugador1.Location = new System.Drawing.Point(4, 100);
-            this.ganados_jugador1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ganados_jugador1.Location = new System.Drawing.Point(3, 81);
             this.ganados_jugador1.Name = "ganados_jugador1";
-            this.ganados_jugador1.Size = new System.Drawing.Size(368, 28);
+            this.ganados_jugador1.Size = new System.Drawing.Size(276, 23);
             this.ganados_jugador1.TabIndex = 1;
             this.ganados_jugador1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -162,10 +155,9 @@
             // 
             this.ganador_automatico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ganador_automatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.ganador_automatico.Location = new System.Drawing.Point(4, 20);
-            this.ganador_automatico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ganador_automatico.Location = new System.Drawing.Point(3, 16);
             this.ganador_automatico.Name = "ganador_automatico";
-            this.ganador_automatico.Size = new System.Drawing.Size(692, 27);
+            this.ganador_automatico.Size = new System.Drawing.Size(519, 22);
             this.ganador_automatico.TabIndex = 0;
             this.ganador_automatico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -179,64 +171,57 @@
             this.panel_automatico.Controls.Add(this.lbl_automatico);
             this.panel_automatico.Controls.Add(this.btn_jugar_automatico);
             this.panel_automatico.Controls.Add(this.txt_automatico);
-            this.panel_automatico.Location = new System.Drawing.Point(121, 278);
-            this.panel_automatico.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_automatico.Location = new System.Drawing.Point(91, 226);
             this.panel_automatico.Name = "panel_automatico";
-            this.panel_automatico.Size = new System.Drawing.Size(817, 204);
+            this.panel_automatico.Size = new System.Drawing.Size(613, 166);
             this.panel_automatico.TabIndex = 2;
             // 
             // txt_nombre_jugador2
             // 
-            this.txt_nombre_jugador2.Location = new System.Drawing.Point(191, 160);
-            this.txt_nombre_jugador2.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre_jugador2.Location = new System.Drawing.Point(143, 130);
             this.txt_nombre_jugador2.Name = "txt_nombre_jugador2";
-            this.txt_nombre_jugador2.Size = new System.Drawing.Size(132, 22);
+            this.txt_nombre_jugador2.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre_jugador2.TabIndex = 10;
             // 
             // txt_nombre_jugador1
             // 
-            this.txt_nombre_jugador1.Location = new System.Drawing.Point(191, 124);
-            this.txt_nombre_jugador1.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre_jugador1.Location = new System.Drawing.Point(143, 101);
             this.txt_nombre_jugador1.Name = "txt_nombre_jugador1";
-            this.txt_nombre_jugador1.Size = new System.Drawing.Size(132, 22);
+            this.txt_nombre_jugador1.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre_jugador1.TabIndex = 9;
             // 
             // lbl_nombre_jugador2
             // 
             this.lbl_nombre_jugador2.AutoSize = true;
-            this.lbl_nombre_jugador2.Location = new System.Drawing.Point(53, 164);
-            this.lbl_nombre_jugador2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nombre_jugador2.Location = new System.Drawing.Point(40, 133);
             this.lbl_nombre_jugador2.Name = "lbl_nombre_jugador2";
-            this.lbl_nombre_jugador2.Size = new System.Drawing.Size(130, 17);
+            this.lbl_nombre_jugador2.Size = new System.Drawing.Size(97, 13);
             this.lbl_nombre_jugador2.TabIndex = 8;
             this.lbl_nombre_jugador2.Text = "Nombre Jugador 2:";
             // 
             // lbl_nombre_jugador1
             // 
             this.lbl_nombre_jugador1.AutoSize = true;
-            this.lbl_nombre_jugador1.Location = new System.Drawing.Point(53, 128);
-            this.lbl_nombre_jugador1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nombre_jugador1.Location = new System.Drawing.Point(40, 104);
             this.lbl_nombre_jugador1.Name = "lbl_nombre_jugador1";
-            this.lbl_nombre_jugador1.Size = new System.Drawing.Size(130, 17);
+            this.lbl_nombre_jugador1.Size = new System.Drawing.Size(97, 13);
             this.lbl_nombre_jugador1.TabIndex = 7;
             this.lbl_nombre_jugador1.Text = "Nombre Jugador 1:";
             // 
             // lbl_automatico
             // 
             this.lbl_automatico.AutoSize = true;
-            this.lbl_automatico.Location = new System.Drawing.Point(53, 37);
-            this.lbl_automatico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_automatico.Location = new System.Drawing.Point(40, 30);
             this.lbl_automatico.Name = "lbl_automatico";
-            this.lbl_automatico.Size = new System.Drawing.Size(237, 17);
+            this.lbl_automatico.Size = new System.Drawing.Size(178, 13);
             this.lbl_automatico.TabIndex = 1;
             this.lbl_automatico.Text = "Ingrese la cantidad de simulaciones:";
             // 
             // btn_jugar_automatico
             // 
-            this.btn_jugar_automatico.Location = new System.Drawing.Point(592, 87);
-            this.btn_jugar_automatico.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_jugar_automatico.Location = new System.Drawing.Point(444, 71);
             this.btn_jugar_automatico.Name = "btn_jugar_automatico";
-            this.btn_jugar_automatico.Size = new System.Drawing.Size(168, 34);
+            this.btn_jugar_automatico.Size = new System.Drawing.Size(126, 28);
             this.btn_jugar_automatico.TabIndex = 6;
             this.btn_jugar_automatico.Text = "Jugar";
             this.btn_jugar_automatico.UseVisualStyleBackColor = true;
@@ -244,10 +229,9 @@
             // 
             // txt_automatico
             // 
-            this.txt_automatico.Location = new System.Drawing.Point(299, 33);
-            this.txt_automatico.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_automatico.Location = new System.Drawing.Point(224, 27);
             this.txt_automatico.Name = "txt_automatico";
-            this.txt_automatico.Size = new System.Drawing.Size(132, 22);
+            this.txt_automatico.Size = new System.Drawing.Size(100, 20);
             this.txt_automatico.TabIndex = 4;
             // 
             // tabPage2
@@ -259,21 +243,19 @@
             this.tabPage2.Controls.Add(this.txt_nombreJugador1m);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1792, 971);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1684, 679);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manual";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btn_JugarManual
             // 
-            this.btn_JugarManual.Location = new System.Drawing.Point(544, 11);
-            this.btn_JugarManual.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_JugarManual.Location = new System.Drawing.Point(408, 9);
             this.btn_JugarManual.Name = "btn_JugarManual";
-            this.btn_JugarManual.Size = new System.Drawing.Size(160, 33);
+            this.btn_JugarManual.Size = new System.Drawing.Size(120, 27);
             this.btn_JugarManual.TabIndex = 6;
             this.btn_JugarManual.Text = "Jugar Ronda";
             this.btn_JugarManual.UseVisualStyleBackColor = true;
@@ -287,18 +269,18 @@
             this.gridJugador2.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.gridJugador2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridJugador2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            this.gridJugador2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridJugador2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridJugador2.BackgroundColor = System.Drawing.Color.White;
             this.gridJugador2.ColumnHeadersHeight = 10;
             this.gridJugador2.ColumnHeadersVisible = false;
-            this.gridJugador2.Location = new System.Drawing.Point(928, 55);
-            this.gridJugador2.Margin = new System.Windows.Forms.Padding(4);
+            this.gridJugador2.Location = new System.Drawing.Point(686, 45);
             this.gridJugador2.Name = "gridJugador2";
             this.gridJugador2.ReadOnly = true;
             this.gridJugador2.RowHeadersVisible = false;
             this.gridJugador2.RowHeadersWidth = 10;
             this.gridJugador2.RowTemplate.Height = 10;
-            this.gridJugador2.Size = new System.Drawing.Size(912, 794);
+            this.gridJugador2.Size = new System.Drawing.Size(683, 520);
             this.gridJugador2.TabIndex = 5;
             // 
             // grid_Jugador1
@@ -307,62 +289,57 @@
             this.grid_Jugador1.AllowUserToDeleteRows = false;
             this.grid_Jugador1.AllowUserToResizeColumns = false;
             this.grid_Jugador1.AllowUserToResizeRows = false;
-            this.grid_Jugador1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            this.grid_Jugador1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_Jugador1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_Jugador1.BackgroundColor = System.Drawing.Color.White;
             this.grid_Jugador1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_Jugador1.ColumnHeadersVisible = false;
-            this.grid_Jugador1.Location = new System.Drawing.Point(8, 55);
-            this.grid_Jugador1.Margin = new System.Windows.Forms.Padding(4);
+            this.grid_Jugador1.Location = new System.Drawing.Point(0, 45);
             this.grid_Jugador1.Name = "grid_Jugador1";
             this.grid_Jugador1.ReadOnly = true;
             this.grid_Jugador1.RowHeadersVisible = false;
             this.grid_Jugador1.RowTemplate.Height = 10;
-            this.grid_Jugador1.Size = new System.Drawing.Size(912, 794);
+            this.grid_Jugador1.Size = new System.Drawing.Size(683, 520);
             this.grid_Jugador1.TabIndex = 4;
             // 
             // txt_nombreJugador2m
             // 
-            this.txt_nombreJugador2m.Location = new System.Drawing.Point(375, 19);
-            this.txt_nombreJugador2m.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombreJugador2m.Location = new System.Drawing.Point(281, 15);
             this.txt_nombreJugador2m.Name = "txt_nombreJugador2m";
-            this.txt_nombreJugador2m.Size = new System.Drawing.Size(132, 22);
+            this.txt_nombreJugador2m.Size = new System.Drawing.Size(100, 20);
             this.txt_nombreJugador2m.TabIndex = 3;
             // 
             // txt_nombreJugador1m
             // 
-            this.txt_nombreJugador1m.Location = new System.Drawing.Point(109, 19);
-            this.txt_nombreJugador1m.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombreJugador1m.Location = new System.Drawing.Point(82, 15);
             this.txt_nombreJugador1m.Name = "txt_nombreJugador1m";
-            this.txt_nombreJugador1m.Size = new System.Drawing.Size(132, 22);
+            this.txt_nombreJugador1m.Size = new System.Drawing.Size(100, 20);
             this.txt_nombreJugador1m.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(212, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Jugador 2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Jugador 1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1782, 927);
+            this.ClientSize = new System.Drawing.Size(1370, 502);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu1;
             this.Name = "Form1";
             this.Text = "Batalla Naval";

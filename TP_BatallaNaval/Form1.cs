@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,8 +17,19 @@ namespace TP_BatallaNaval
         public Form1()
         {
             InitializeComponent();
-        }
+            this.WindowState = FormWindowState.Maximized;
+            //Setea una mejora de Scroll para la grilla de jugador 1
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            grid_Jugador1, new object[] { true });
+            //Setea una mejora de Scroll para la grilla de jugador 2
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            gridJugador2, new object[] { true });
 
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+        
         private void menu_automatico_Click(object sender, EventArgs e)
         {
             panel_automatico.Visible = true;
@@ -106,12 +118,13 @@ namespace TP_BatallaNaval
 
         }
 
-        private Color buscarColor(String estado_panel)
+        private Color buscarColor(string estado_panel)
         {
             if (estado_panel == "O")
             {
                 return Color.LightBlue;
-            } else if(estado_panel=="C" || estado_panel=="D" || estado_panel == "F" || estado_panel == "P" || estado_panel == "S")
+            }
+            else if (estado_panel == "C" || estado_panel == "D" || estado_panel == "F" || estado_panel == "P" || estado_panel == "S")
             {
                 return Color.Gray;
             }
@@ -123,13 +136,17 @@ namespace TP_BatallaNaval
 
         private String buscarResultadoDisparo(String estado_panel)
         {
-            if (estado_panel == "X" || estado_panel=="M")
+            if (estado_panel == "M")
             {
                 return "X";
             }
+            else if (estado_panel == "X")
+            {
+                return "H";
+            }
             else
             {
-                return "";
+                return string.Empty;
             }
         }
 
@@ -138,11 +155,11 @@ namespace TP_BatallaNaval
         private void btn_JugarManual_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            if(flag == 0)
+            if (flag == 0)
             {// PRIMERA VEZ QUE SE APRIETA EL BOTON
                 // Crea la partida
                 partida = new Partida(txt_nombreJugador1m.Text, txt_nombreJugador2m.Text);
-             //Inicializa las grillas
+                //Inicializa las grillas
                 // Limpia ambos tableros
                 grid_Jugador1.Rows.Clear();
                 gridJugador2.Rows.Clear();
@@ -153,16 +170,17 @@ namespace TP_BatallaNaval
                 for (int i = 0; i < 64; i++)
                 {
                     grid_Jugador1.Rows.Add();
+                    grid_Jugador1.Rows[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //Alinea las letras en las celdas
                     gridJugador2.Rows.Add();
-                }  
+                    gridJugador2.Rows[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
             }
-            
-            // Ejecuta un disparo cada jugador
-            partida.jugarRonda();
+
+
             // Trae los tableros de cada jugador
             Models.Tableros.Panel[][] tableroJugador1 = partida.Jugador1.TableroDisparo.paneles;
             Models.Tableros.Panel[][] tableroJugador2 = partida.Jugador2.TableroDisparo.paneles;
-           // LLena las grillas con los barcos y los disparos
+            // LLena las grillas con los barcos y los disparos
             for (int i = 0; i < 64; i++)
             {
                 for (int j = 0; j < 32; j++)
@@ -172,19 +190,32 @@ namespace TP_BatallaNaval
                         // Colorea cada casilla de ambos tableros para ver la ubicacion de los barcos (Solo la primera vez que se aprieta el boton)
                         Color colorCasillaJ1 = buscarColor(tableroJugador1[i][j].Estado);
                         Color colorCasillaJ2 = buscarColor(tableroJugador2[i][j].Estado);
-                        
+
                         grid_Jugador1.Rows[i].Cells[j].Style.BackColor = colorCasillaJ1;
                         gridJugador2.Rows[i].Cells[j].Style.BackColor = colorCasillaJ2;
                     }
-                    
-                        //Pone los disparos en cada tablero como una X
-                        String disparoJ1 = buscarResultadoDisparo(tableroJugador1[i][j].Estado);
-                        String disparoJ2 = buscarResultadoDisparo(tableroJugador2[i][j].Estado);
 
-                        grid_Jugador1.Rows[i].Cells[j].Value = disparoJ1;
-                        gridJugador2.Rows[i].Cells[j].Value = disparoJ2;
+                    //Pone los disparos en cada tablero como una X
+                    String disparoJ1 = buscarResultadoDisparo(tableroJugador1[i][j].Estado);
+                    String disparoJ2 = buscarResultadoDisparo(tableroJugador2[i][j].Estado);
+                    if (disparoJ1 == "H")
+                    {
+                        Color colorCasillaJ1 = Color.Red;
+                        grid_Jugador1.Rows[i].Cells[j].Style.BackColor = colorCasillaJ1;
+                        gridJugador2.Rows[i].Cells[j].Style.BackColor = colorCasillaJ1;
+                    }
+                    if (disparoJ2 == "H")
+                    {
+                        Color colorCasillaJ2 = Color.Red;
+                        gridJugador2.Rows[i].Cells[j].Style.BackColor = colorCasillaJ2;
+                        grid_Jugador1.Rows[i].Cells[j].Style.BackColor = colorCasillaJ2;
+                    }
+                    grid_Jugador1.Rows[i].Cells[j].Value = disparoJ1;
+                    gridJugador2.Rows[i].Cells[j].Value = disparoJ2;
                 }
             }
+            // Ejecuta un disparo cada jugador
+            partida.jugarRonda();
             flag++;
             Cursor.Current = Cursors.Default;
         }

@@ -58,7 +58,6 @@ namespace TP_BatallaNaval.Models
                     int filaFinal = filaInicio, columnaFinal = columnaInicio;
                     var orientacion = aleatorio.Next(1, 2049) % 2; //0 para que sea horizontal
 
-                    List<int> NumerosPaneles = new List<int>();
                     if (orientacion == 0)
                     {
                         for (int i = 0; i < barco.largo; i++)
