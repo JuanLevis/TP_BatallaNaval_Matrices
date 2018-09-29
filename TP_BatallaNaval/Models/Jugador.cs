@@ -15,6 +15,7 @@ namespace TP_BatallaNaval.Models
         public Tablero Tablero { get; set; }
         public TableroDisparo TableroDisparo { get; set; }
         public List<Barco> Barcos { get; set; }
+        public static bool flagManual { get; set; } = false;
         public bool haPerdido
         {
             get
@@ -42,6 +43,7 @@ namespace TP_BatallaNaval.Models
         public void ubicarBarcos()
 
         {
+            
             //Esta creacion del numero random es un forma muy util encontrada en StackOverflow
             Random aleatorio = new Random(Guid.NewGuid().GetHashCode());
             foreach (var barco in Barcos)
@@ -87,7 +89,11 @@ namespace TP_BatallaNaval.Models
                     foreach (var panel in panelesAfectados)
                     {
                         panel.tipoPanel = barco.tipoPanel;
-                        TableroDisparo.paneles[panel.coordenadas.fila][panel.coordenadas.columna] = panel;
+                        if (flagManual)
+
+                        {
+                            TableroDisparo.paneles[panel.coordenadas.fila][panel.coordenadas.columna] = panel;
+                        }
                     }
                     estaAbierto = false;
 

@@ -117,6 +117,25 @@ namespace TP_BatallaNaval
             }
 
         }
+        private void tabControl1_SelectedIndexChanged(Object sender, EventArgs e)
+        {
+            TabControl control = (TabControl)sender;
+            if (control.SelectedTab.Text == "Automatico")
+            {
+                Jugador.flagManual = false;
+                partida = null;
+                flag = 0;
+                grid_Jugador1.Rows.Clear();
+                gridJugador2.Rows.Clear();
+            }
+            else
+            {
+                Jugador.flagManual = true;
+            }
+        }
+
+        
+
 
         private Color buscarColor(string estado_panel)
         {

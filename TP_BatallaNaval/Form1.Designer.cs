@@ -86,7 +86,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-1, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1692, 705);
+            this.tabControl1.Size = new System.Drawing.Size(1606, 705);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -96,7 +96,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1684, 679);
+            this.tabPage1.Size = new System.Drawing.Size(1598, 679);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Automatico";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             this.panel_auto_ganador.Controls.Add(this.ganados_jugador2);
             this.panel_auto_ganador.Controls.Add(this.ganados_jugador1);
             this.panel_auto_ganador.Controls.Add(this.ganador_automatico);
-            this.panel_auto_ganador.Location = new System.Drawing.Point(134, 38);
+            this.panel_auto_ganador.Location = new System.Drawing.Point(91, 38);
             this.panel_auto_ganador.Name = "panel_auto_ganador";
             this.panel_auto_ganador.Size = new System.Drawing.Size(527, 144);
             this.panel_auto_ganador.TabIndex = 3;
@@ -246,7 +246,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1684, 679);
+            this.tabPage2.Size = new System.Drawing.Size(1598, 679);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manual";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -280,7 +280,7 @@
             this.gridJugador2.RowHeadersVisible = false;
             this.gridJugador2.RowHeadersWidth = 10;
             this.gridJugador2.RowTemplate.Height = 10;
-            this.gridJugador2.Size = new System.Drawing.Size(683, 520);
+            this.gridJugador2.Size = new System.Drawing.Size(597, 520);
             this.gridJugador2.TabIndex = 5;
             // 
             // grid_Jugador1
@@ -299,7 +299,7 @@
             this.grid_Jugador1.ReadOnly = true;
             this.grid_Jugador1.RowHeadersVisible = false;
             this.grid_Jugador1.RowTemplate.Height = 10;
-            this.grid_Jugador1.Size = new System.Drawing.Size(683, 520);
+            this.grid_Jugador1.Size = new System.Drawing.Size(597, 520);
             this.grid_Jugador1.TabIndex = 4;
             // 
             // txt_nombreJugador2m
@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 502);
+            this.ClientSize = new System.Drawing.Size(1284, 502);
             this.Controls.Add(this.tabControl1);
             this.Menu = this.mainMenu1;
             this.Name = "Form1";
