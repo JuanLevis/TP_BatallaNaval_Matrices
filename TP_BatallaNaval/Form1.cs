@@ -36,7 +36,7 @@ namespace TP_BatallaNaval
             panel_auto_ganador.Visible = true;
 
         }
-
+       
         private void menu_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -124,7 +124,12 @@ namespace TP_BatallaNaval
             {
                 Jugador.flagManual = false;
                 partida = null;
-                flag = 0;
+                cantidadRondas = 0;
+                hitsJ1 = 0;
+                hitsJ2 = 0;
+                lbl_cantRondas.Text = "0";
+                lbl_efectividadJ1.Text = "0%";
+                lbl_efectividadJ2.Text = "0%";
                 grid_Jugador1.Rows.Clear();
                 gridJugador2.Rows.Clear();
             }
@@ -168,13 +173,16 @@ namespace TP_BatallaNaval
                 return string.Empty;
             }
         }
-
-        int flag = 0;
+        
+        int cantidadRondas = 0;
         Partida partida = null;
+        float hitsJ1 = 0;
+        float hitsJ2 = 0;
+       
         private void btn_JugarManual_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            if (flag == 0)
+            if (cantidadRondas == 0)
             {// PRIMERA VEZ QUE SE APRIETA EL BOTON
                 // Crea la partida
                 partida = new Partida(txt_nombreJugador1m.Text, txt_nombreJugador2m.Text);
@@ -204,7 +212,7 @@ namespace TP_BatallaNaval
             {
                 for (int j = 0; j < 32; j++)
                 {
-                    if (flag == 0)
+                    if (cantidadRondas == 0)
                     {
                         // Colorea cada casilla de ambos tableros para ver la ubicacion de los barcos (Solo la primera vez que se aprieta el boton)
                         Color colorCasillaJ1 = buscarColor(tableroJugador1[i][j].Estado);
@@ -222,12 +230,14 @@ namespace TP_BatallaNaval
                         Color colorCasillaJ1 = Color.Red;
                         grid_Jugador1.Rows[i].Cells[j].Style.BackColor = colorCasillaJ1;
                         gridJugador2.Rows[i].Cells[j].Style.BackColor = colorCasillaJ1;
+                        hitsJ1++;
                     }
                     if (disparoJ2 == "H")
                     {
                         Color colorCasillaJ2 = Color.Red;
                         gridJugador2.Rows[i].Cells[j].Style.BackColor = colorCasillaJ2;
                         grid_Jugador1.Rows[i].Cells[j].Style.BackColor = colorCasillaJ2;
+                        hitsJ2++;
                     }
                     grid_Jugador1.Rows[i].Cells[j].Value = disparoJ1;
                     gridJugador2.Rows[i].Cells[j].Value = disparoJ2;
@@ -235,8 +245,15 @@ namespace TP_BatallaNaval
             }
             // Ejecuta un disparo cada jugador
             partida.jugarRonda();
-            flag++;
+            cantidadRondas++;
+            float efectividadJ1 = hitsJ1 / partida.Jugador1.cantidadDisparos;
+            float efectividadJ2 = hitsJ2 / partida.Jugador2.cantidadDisparos; 
+            lbl_cantRondas.Text = cantidadRondas.ToString();
+            lbl_efectividadJ1.Text = efectividadJ1.ToString() + " %";
+            lbl_efectividadJ2.Text = efectividadJ2.ToString() + " %";
             Cursor.Current = Cursors.Default;
         }
+
+        
     }
 }
