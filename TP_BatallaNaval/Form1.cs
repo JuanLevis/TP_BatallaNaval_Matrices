@@ -207,6 +207,8 @@ namespace TP_BatallaNaval
             // Trae los tableros de cada jugador
             Models.Tableros.Panel[][] tableroJugador1 = partida.Jugador1.TableroDisparo.paneles;
             Models.Tableros.Panel[][] tableroJugador2 = partida.Jugador2.TableroDisparo.paneles;
+            hitsJ1 = 0;
+            hitsJ2 = 0;
             // LLena las grillas con los barcos y los disparos
             for (int i = 0; i < 64; i++)
             {
@@ -254,6 +256,12 @@ namespace TP_BatallaNaval
             Cursor.Current = Cursors.Default;
         }
 
-        
+        private void txt_automatico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsNumber(e.KeyChar) || !Char.IsSeparator(e.KeyChar))
+            {
+                MessageBox.Show("Este campo solo admite numeros enteros");
+            }
+        }
     }
 }
