@@ -258,8 +258,9 @@ namespace TP_BatallaNaval
 
         private void txt_automatico_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsNumber(e.KeyChar) || !Char.IsSeparator(e.KeyChar))
+            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
+                e.Handled = true;
                 MessageBox.Show("Este campo solo admite numeros enteros");
             }
         }
